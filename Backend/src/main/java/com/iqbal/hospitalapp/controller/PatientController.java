@@ -22,7 +22,14 @@ import com.iqbal.hospitalapp.service.PrescriptionService;
 
 @CrossOrigin(origins="http://localhost:4200")
 @RestController
+//POST http://localhost:8088/api/patient/register
+//PUT http://localhost:8088/api/patient/{patientId}
+//GET http://localhost:8088/api/patient/{patientId}
+//ET http://localhost:8088/api/patient/prescription
+//GET http://localhost:8088/api/patient/prescription/{prescriptionId}
+// GET http://localhost:8088/api/patient
 //http://localhost:8088/api/patient
+
 @RequestMapping("/api/patient")
 public class PatientController {
 	

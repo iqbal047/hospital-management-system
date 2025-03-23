@@ -29,6 +29,10 @@ import com.iqbal.hospitalapp.service.PrescriptionService;
 @CrossOrigin(origins="http://localhost:4200")
 @RestController
 //http://localhost:8088/api/doctor
+//POST http://localhost:8088/api/doctor/register (for registration)
+//GET http://localhost:8088/api/doctor/1 (for getting a doctor by ID)
+//DELETE http://localhost:8088/api/doctor/1 (for deleting a doctor by ID)
+//GET http://localhost:8088/api/doctor/booking (for getting all appointments)
 @RequestMapping("/api/doctor")
 public class DoctorController {
 
