@@ -54,7 +54,13 @@ public class PatientServiceImpl implements PatientService{
 		 
 		return patientRepository.findById(patientId).orElseThrow(()->new ResourceNotFoundException("Patient","PatientId",patientId));
 	}
-	
-	 
+
+	@Override
+	public Patient deletePatientById(long patientId) {
+		Patient patient = patientRepository.findById(patientId)
+				.orElseThrow(() -> new RuntimeException("Patient not found"));
+		patientRepository.deleteById(patientId);
+		return patient;
+	}
 
 }

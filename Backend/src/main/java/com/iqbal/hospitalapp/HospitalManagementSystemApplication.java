@@ -8,7 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class HospitalManagementSystemApplication {
 
 	public static void main(String[] args) {
-	ConfigurableApplicationContext kamal= SpringApplication.run(HospitalManagementSystemApplication.class, args);
+	ConfigurableApplicationContext iqbal= SpringApplication.run(HospitalManagementSystemApplication.class, args);
 
 
 		System.out.println("Hospital is working");

@@ -5,14 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import com.iqbal.hospitalapp.model.Patient;
 import com.iqbal.hospitalapp.model.Payment;
 import com.iqbal.hospitalapp.model.Prescription;
@@ -83,4 +76,12 @@ public class PatientController {
 	public List<Payment> getAllPayments(){
 		return paymentService.getAllPayments();
 	}
+
+	@DeleteMapping("{patientId}")
+	public ResponseEntity<String> deletePatient(@PathVariable("patientId") long patientId) {
+		patientService.deletePatientById(patientId);
+		return new ResponseEntity<>("Patient deleted successfully", HttpStatus.OK);
+	}
+
+
 }
